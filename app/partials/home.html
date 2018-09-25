@@ -1,0 +1,52 @@
+<section layout-lt-md="column" layout-gt-md="row" layout-margin layout-padding layout-align="space-around center">
+  <span flex="10"></span>
+
+  <md-card ng-controller="ProfileCtrl" flex="10" flex-order-gt-md="3">
+   <md-card-content>
+
+    <form ng-submit="saveProfile()">
+      <md-input-container class="md-icon-float" >
+        <!-- Use floating label instead of placeholder -->
+        <md-icon md-svg-src="../images/icons/ic_account_circle_24px.svg" class="name"></md-icon>
+        <input ng-model="profile.name" type="text" placeholder="Name">
+      </md-input-container>
+      <md-input-container>
+        <input ng-model="profile.phone" type="text" placeholder="Phone Number">
+      <md-icon md-svg-src="images/icons/ic_settings_phone_24px.svg"></md-icon>
+      </md-input-container>
+      <md-input-container >
+       <!-- Use floating placeholder instead of label -->
+       <md-icon md-svg-src="../images/icons/ic_mail_24px.svg" class="email"></md-icon>
+       <input ng-model="profile.email" type="email" placeholder="Email (required)" ng-required="true">
+      </md-input-container>
+      <md-input-container>
+       <md-icon md-svg-src="../images/icons/ic_event_24px.svg" style="display:inline-block;"></md-icon>
+       <input ng-model="profile.address" type="text" placeholder="Address" >
+      </md-input-container>
+
+    </form>
+   </md-card-content>
+   <md-card-footer>
+      <md-button type="submit" class="md-primary md-raised">Save Changes</md-button>
+    </md-card-footer>
+  </md-card>
+
+
+  <md-content flex-order-gt-md="1" flex="65" layout-padding layout-margin class="md-whiteframe-z3">
+    <md-icon md-svg-src="images/TACTWORK-PURPLE.svg" aria-label="jeffy" class="logo" aria-hidden="true"></md-icon>
+    <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center" ng-controller="BottomSheetExample">
+      <md-button flex="50" class="md-primary md-raised" ng-click="showListBottomSheet($event)">Show as List</md-button>
+    </div>
+    <md-divider></md-divider>
+    <h2 class="md-display-3">Tactwork</h2>
+
+    <md-divider></md-divider>
+    <p class="md-body-1">Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+    <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Vestibulum id ligula porta felis euismod semper. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Nulla vitae elit libero, a pharetra augue. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+    <p class="md-body-1">Etiam porta sem malesuada magna mollis euismod. Maecenas faucibus mollis interdum. Maecenas sed diam eget risus varius blandit sit amet non magna. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+
+  </md-content>
+  <div ng-controller="SpinCtrl as vm" flex flex-order-gt-md="2">
+    <md-progress-circular md-mode="determinate" value="{{vm.determinateValue}}" md-diameter="96"></md-progress-circular>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+<md-content layout="row" layout-align="space-around center">
+  <section>
+    <md-list layout-padding layout-margin class="md-whiteframe-z3">
+      <md-list-item class="md-3-line" ng-repeat="post in posts">
+        <md-icon md-svg-src="images/TACTWORK-PURPLE.svg" aria-label="jeffy" class="logo" aria-hidden="true"></md-icon>
+        <div class="md-list-item-text" layout="column" ng-class="{'md-offset': $index != 0 }">
+          <h2 class="md-title">{{post.title}}</h2>
+          <p class="md-display-1">{{ post.headline }}</p>
+          <p class="md-display-2">{{post.intro}}</p>
+        </div>
+        <md-icon md-svg-icon="share" ng-if="$index === 0"></md-icon>
+        <md-divider inset></md-divider>
+      </md-list-item>
+    </md-list>
+  </section>
+  <section>
+    <md-card class="md-whiteframe-z3" ng-controller="ProfileCtrl">
+     <md-card-content>
+      <h4 class="md-headline">Let's work together.</h4>
+
+      <form ng-submit="saveProfile()">
+        <md-input-container class="md-icon-float" >
+         <!-- Use floating label instead of placeholder -->
+         <label>Name</label>
+         <md-icon md-svg-src="../images/icons/ic_account_circle_24px.svg" class="name"></md-icon>
+         <input ng-model="profile.name" type="text">
+        </md-input-container>
+        <md-input-container>
+         <md-icon md-svg-src="images/icons/ic_settings_phone_24px.svg"></md-icon>
+         <input ng-model="profile.phone" type="text" placeholder="Phone Number">
+        </md-input-container>
+        <md-input-container >
+         <!-- Use floating placeholder instead of label -->
+         <md-icon md-svg-src="../images/icons/ic_mail_24px.svg" class="email"></md-icon>
+         <input ng-model="profile.email" type="email" placeholder="Email (required)" ng-required="true">
+        </md-input-container>
+        <md-input-container md-no-float>
+         <md-icon md-svg-src="../images/icons/ic_event_24px.svg" style="display:inline-block;"></md-icon>
+         <input ng-model="profile.address" type="text" placeholder="Address" >
+        </md-input-container>
+        <md-button class="md-raised md-accent" type="submit">Save Changes</md-button>
+      </form>
+     </md-card-content>
+     <md-card-footer>
+
+
+     </md-card-footer>
+    </md-card>
+  </section>
+</md-content>

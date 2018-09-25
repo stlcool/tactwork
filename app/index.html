@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>tactwork.com</title>
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Tactwork">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+  <meta name="msapplication-TileColor" content="#3372DF">
+  <!--These files will be Concat on gulp build. When my tooling is done. Also will use custom scss from source -->
+  <link rel="stylesheet" href="styles/fnts.css">
+  <link rel="stylesheet" href="styles/angular-material.css" rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="styles/main.css" rel='stylesheet' type='text/css'>
+
+  <!--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic" rel='stylesheet' type='text/css'>-->
+  <link href='https://fonts.googleapis.com/css?family=Rouge+Script&text=tactworkTACTWORK&effect=emboss' rel='stylesheet' type='text/css'>
+</head>
+  <body ng-app="app" ng-cloak layout="row" ng-controller="SideNavCtrl">
+
+    <!-- Start left sidenav -->
+    <md-sidenav class="md-sidenav-left site-sidenav md-whiteframe-z2" md-component-id="left" >
+      <div ng-controller="simpleMessageCtrl">
+        <md-input-container>
+          <label>Name</label>
+          <input ng-model="name" type="text" id="nameInput" placeholder="enter a username...">
+        </md-input-container>
+        <md-input-container>
+           <input ng-model="msg" ng-keydown="addMessage($event)" type="text" id="messageInput"  placeholder="Type a message...">
+        </md-input-container>
+
+         <ul id="example-messages" class="example-chat-messages">
+           <li ng-repeat="msg in messages">
+             <strong class="example-chat-username">{{ msg.from }}</strong>
+             {{ msg.body }}
+           </li>
+         </ul>
+      </div>
+    </md-sidenav>
+    <!-- Start Main Content Area  -->
+    <div layout="column" flex tabIndex="-1" role="main">
+
+      <div class="tw-ribbon"></div>
+      <main class="tw-main" layout-margin layout-padding flex ng-view>
+      </main>
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button ng-click="toggleRight()"  class="md-icon-button">
+            <md-icon aria-label="Menu" md-svg-icon="svg-1"></md-icon>
+          </md-button>
+          <span flex></span>
+          <h1> tactwork</h1>
+          <span flex></span>
+        </div>
+      </md-toolbar>
+    </div>
+    <!-- Start Sidenav Right  -->
+    <md-sidenav layout="column" class="md-sidenav-right site-sidenav md-whiteframe-z2" md-component-id="right" md-sidenav-is-locked-open="">
+      <md-toolbar>
+        <div class="md-toolbar-tools">
+          <md-button ng-click="toggleRight()"  class="md-icon-button">
+            <md-icon aria-label="Menu" md-svg-icon="svg-1"></md-icon>
+          </md-button>
+          <span flex></span>
+          <h2 class="md-display-1">Headline</h2>
+          <span flex></span>
+        </div>
+      </md-toolbar>
+      <md-icon md-svg-src="images/TACTWORK-PURPLE.svg" aria-label="jeffy" class="logo" aria-hidden="true"></md-icon>
+
+      <span flex></span>
+      <md-list ng-controller="NavCtrl">
+        <md-list-item>
+          <md-button ng-click="nav('/home')">
+            <md-icon md-svg-icon="svg-1" class="avatar"></md-icon>
+            Test
+          </md-button>
+        </md-list-item>
+        <md-list-item>
+          <md-button ng-click="nav('/about')">
+            <md-icon md-svg-icon="svg-2" alt="avatar" class="avatar"></md-i
+            about
+          </md-button>
+        </md-list-item>
+        <md-list-item>
+          <md-button ng-click="nav('/articles')">
+            <md-icon md-svg-icon="svg-3" alt="avatar" class="avatar"></md-icon>
+            Articles
+          </md-button>
+        </md-list-item>
+        <md-list-item>
+          <md-button ng-click="nav('/projects')">
+            <md-icon md-svg-icon="svg-4" alt="avatar" class="avatar"></md-icon>
+            Servers
+          </md-button>
+        </md-list-item>
+      </md-list>
+    </md-sidenav>
+    <!-- Start Scripts -->
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="angular-material.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
+    <script src="app.js"></script>
+
+  </body>
+</html>

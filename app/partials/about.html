@@ -1,0 +1,291 @@
+  <section>
+    <h1 class="md-display-4 action">Architecture.</h1>
+    <p class="md-body-1">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis magni rerum quisquam eius est repellendus sequi facilis enim ullam mollitia fugiat sint beatae impedit optio blanditiis error, aspernatur pariatur. Cumque.
+    </p>
+  </section>
+  <section>
+    <h1 class="md-display-4 warn">Design.</h1>
+    <p>
+        Tactwork's using material design. We're just a little ahead right now. Don't worry though, we'll help you get your balance on the shoulder of a giant too!
+    </p>
+    <md-card>
+      <md-toolbar class="md-warn md-card-toolbar">
+
+      </md-toolbar>
+      <md-icon md-svg-src="images/robbie.svg" id="dinosaur" aria-label="robbie"    ></md-icon>
+      <md-card-footer class="md-warn">
+        <md-button class="md-primary"> Click to read more on design in our blog.</md-button>
+      </md-card-footer>
+    </md-card>
+  </section>
+
+  <section>
+    <h2 class="md-display-3">The Dinosaur.</h2>
+    <md-card>
+     <md-icon md-svg-src="images/jeffy-bg.svg" id="dinosaur" aria-label="jeffy"    ></md-icon>
+      <md-card-content>
+        <h2 class="md-title">The fool who thought himself wise.</h2>
+        <p class="pullquote">
+
+        </p>
+      </md-card-content>
+      <div class="md-actions" layout="row" layout-align="end center">
+        <md-button class="md-accent">Action 1</md-button>
+        <md-button>Action 2</md-button>
+      </div>
+    </md-card>
+  </section>
+  <li ng-repeat="item in list | filter:name">{{ item | json }}</li>
+
+  <article id="home" class="md-padding">
+    <header>
+      <h1 class="md-display-4 ">Welcome to Tactwork</h1>
+    </header>
+    <section>
+      <p class="intro-shadow">
+
+        We're coming soon. We're currently focusing on a small group of client.s
+        We do web app's and cloud architecture. Of course we can offer pure on site solutions.
+        Do one thing and do it right. With tactwork you can guarentee: A simple easy to use system, a fluid workflow, and an nefound orgazational clarity. It works when you need it to, we also guarentee <strong>99.98%</strong> uptime.
+      </p>
+      <md-button ng-controller="NotifyCtrl" class="md-warn md-raised" ng-click="showActionToast()">
+          TW
+      </md-button>
+      <div>
+        <md-button class="md-primary md-raised" ng-controller="DialogCtrl" ng-click="showAdvanced($event)">
+          Watch Demo
+        </md-button>
+      </div>
+
+    </section>
+    <section>
+      <h1 class="md-display-4">The Robot.</h1>
+      <md-card>
+       <md-icon md-svg-src="images/robbie.svg" id="dinosaur" aria-label="robbie"    ></md-icon>
+        <md-card-content>
+          <h2 class="md-title">
+            Nice to meet you
+          </h2>
+          <p class="pullquote">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque fuga deserunt, dolore assumenda dolorum tempore ipsum veniam porro sint fugit eveniet labore accusantium fugiat eum aperiam, itaque molestias officia dolores.
+          </p>
+        </md-card-content>
+        <div class="md-actions" layout="row" layout-align="end center">
+          <md-button class="md-accent">Action 1</md-button>
+          <md-button>Action 2</md-button>
+        </div>
+      </md-card>
+    </section>
+
+  </article>
+
+<md-content id="hello-scott" class="tactwork-pubs md-whiteframe-z3">
+
+    <section class="md-hue-1" flex layout-padding ng-repeat="weather in weathers | filter:query | orderBy:orderProp">
+        {{weathers.currently}}
+        <p class="heading">Date{{date}}</p>
+        <h1 class="md-display-3">{{post.currently}}</h1>
+        <md-divider></md-divider>
+        <h3 class="md-headline">
+            {{post.intro}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, amet vitae aliquid placeat mpedit fugiat aspernatur maiores! Sequi porro perspiciatis minima voluptatum ducimus, harum, molestias praesentium, perferendis sit ipsa quo.
+        </h3>
+        <p class="pullquote">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita eaque voluptatem doloremque consequuntur distinctio, sapiente id ea olorum maiores repellat quos. Numquam quis est dolores eaque consequatur quaerat alias ducimus.
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quidem, dolorem at expedita vel laudantium cum eligendi error emporibus, aut sint minima minus, sunt exercitationem! Laudantium nulla, necessitatibus veniam cumque!
+        </p>
+        <md-button class="md-raised md-no-ink"  > Forcast </md-button>
+        {{data}}
+        <md-divider></md-divider>
+        <md-button ng-controller="NotifyCtrl" class="md-warn md-raised" ng-click="showCustomToast()">
+          TW
+        </md-button>
+    </section>
+</md-content>
+<div ng-controller="BottomSheetExample" class="md-padding">
+  <h2 class="md-title">Usage</h2>
+  <p>Bottom sheets can be displayed by clicking one of the buttons below.  Once shown, it can be
+  dismissed by either swiping down or clicking in the shaded area.</p>
+  <h2 class="md-title">Actions</h2>
+  <p>Use one of the following buttons to display a bottom sheet.</p>
+  <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
+    <md-button flex="50" class="md-primary md-raised" ng-click="showListBottomSheet($event)">Show as List</md-button>
+  </div>
+</div>
+
+<section class="md-hue-1" layout-padding>
+    <h1 class="h1 warn">System Architecture</h1>
+    <md-divider></md-divider>
+    <h3 class="md-headline">
+        {{post.intro}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, amet vitae aliquid placeat mpedit fugiat aspernatur maiores! Sequi porro perspiciatis minima voluptatum ducimus, harum, molestias praesentium, perferendis sit ipsa quo.
+    </h3>
+    <md-divider></md-divider>
+    <h1 class="h1 accent">Planning & Design</h1>
+    <md-divider></md-divider>
+    <h3 class="md-headline">
+        {{post.intro}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, amet vitae aliquid placeat mpedit fugiat aspernatur maiores! Sequi porro perspiciatis minima voluptatum ducimus, harum, molestias praesentium, perferendis sit ipsa quo.
+    </h3>
+    <md-divider></md-divider>
+    <h1 class="h1 action">Implementation &  Preservation</h1>
+    <md-divider></md-divider>
+    <h3 class="md-headline">
+        {{post.intro}} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus, amet vitae aliquid placeat mpedit fugiat aspernatur maiores! Sequi porro perspiciatis minima voluptatum ducimus, harum, molestias praesentium, perferendis sit ipsa quo.
+    </h3>
+    <md-divider></md-divider>
+    <md-button ng-click="auth.$authWithOAuthPopup('google')">Login</md-button><div ng-controller="BottomSheetExample" class="md-padding">
+  <h2 class="md-title">Usage</h2>
+  <p>Bottom sheets can be displayed by clicking one of the buttons below.  Once shown, it can be
+  dismissed by either swiping down or clicking in the shaded area.</p>
+  <h2 class="md-title">Actions</h2>
+  <p>Use one of the following buttons to display a bottom sheet.</p>
+  <div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
+    <md-button flex="50" class="md-primary md-raised" ng-click="showListBottomSheet($event)">Show as List</md-button>
+  </div>
+</div>
+</section>
+<div class="bottom-sheet-demo inset" layout="row" layout-sm="column" layout-align="center">
+  <md-button flex="50" class="md-primary md-raised" ng-click="showListBottomSheet($event)">Show as List</md-button>
+</div>
+
+
+
+
+<section>
+    <h3>Contact Information</h3>
+    <table>
+      <thead>
+        <th>Registrant Contact</th>
+        <th><span class="label">Name:</span></th>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="white-space: nowrap;">
+            Kenan Hasstedt
+          </td>
+          <td style="white-space: nowrap;">
+            <span class="label">Organization:</span> tactwork
+          </td>
+          <td style="white-space: nowrap;">
+            <span class="label">Mailing Address:</span> 1736 Meadow Lane, Edwardsville IL 62221 US
+          </td>
+          <td style="white-space: nowrap;">
+            <span class="label">Phone:</span> +1.3145962017
+          </td>
+          <td style="white-space: nowrap;">
+            <span class="label">Ext:</span>
+          </td>
+          <td style="white-space: nowrap;">
+            <span class="label">Fax:</span>
+          </td>
+          <td style="white-space: nowrap;">
+            <span class="label">Fax Ext:</span>
+          </td>
+          <td style="white-space: nowrap;">
+            <span class="label">Email:</span>
+            <span class="text-email">kenan@tactwork.com</span>
+          </td>
+        </tr>
+
+      </tbody>
+
+    </table>
+
+</section><!--
+<div ng-controller="SubheaderAppCtrl" layout="column" flex layout-fill>
+  <md-content style="height: 600px;" md-theme="altTheme">
+    <section>
+      <md-subheader class="md-primary">Unread Messages</md-subheader>
+      <md-list layout-padding>
+        <md-list-item class="md-3-line" ng-repeat="message in messages">
+            <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
+            <div class="md-list-item-text">
+              <h3>{{message.what}}</h3>
+              <h4>{{message.who}}</h4>
+              <p>
+                {{message.notes}}
+              </p>
+            </div>
+        </md-list-item>
+      </md-list>
+    </section>
+    <section>
+      <md-subheader class="md-warn">Late Messages</md-subheader>
+      <md-list layout="column" layout-padding>
+        <md-list-item class="md-3-line" ng-repeat="message in messages">
+          <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
+          <div class="md-list-item-text">
+            <h3>{{message.what}}</h3>
+            <h4>{{message.who}}</h4>
+            <p>
+              {{message.notes}}
+            </p>
+          </div>
+        </md-list-item>
+      </md-list>
+    </section>
+    <section>
+      <md-subheader>Read Messages</md-subheader>
+      <md-list layout="column" layout-padding>
+        <md-list-item class="md-3-line" ng-repeat="message in messages">
+          <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
+          <div class="md-list-item-text">
+            <h3>{{message.what}}</h3>
+            <h4>{{message.who}}</h4>
+            <p>
+              {{message.notes}}
+            </p>
+          </div>
+        </md-list-item>
+      </md-list>
+    </section>
+    <section>
+      <md-subheader class="md-accent">Archived messages</md-subheader>
+      <md-list layout="column" layout-padding>
+        <md-list-item class="md-3-line" ng-repeat="message in messages">
+          <img ng-src="{{message.face}}" class="md-avatar" alt="{{message.who}}">
+          <div class="md-list-item-text">
+            <h3>{{message.what}}</h3>
+            <h4>{{message.who}}</h4>
+            <p>
+              {{message.notes}}
+            </p>
+          </div>
+        </md-list-item>
+      </md-list>
+    </section>
+  </md-content>
+</div>
+
+
+
+
+
+<md-sidenav class="md-whiteframe-z1 md-sidenav-left" md-component-id="left">
+  <p>
+    <i class="material-icons md-24">&#xE87C;</i>
+
+    <md-icon md-svg-src="images/icons/ic_android_48px.svg" style="color:#0F0;" alt="Android"></md-icon>
+  </p>
+  <md-button ng-href="#/about">about</md-button>
+  <md-button ng-href="#/home">Home</md-button>
+  <md-button ng-href="#/articles">Articles</md-button>
+  <md-button ng-href="#/projects">Projects</md-button>
+  <md-button class="md-primary md-raised" ng-controller="DialogCtrl" ng-click="showAdvanced($event)">
+    Advanced Modal
+  </md-button>
+  <md-button class="md-warn md-raised" ng-controller="DialogCtrl" ng-click="showAlert($event)">
+    Warning Dialog
+  </md-button>
+  <md-button class="md-accent md-raised" ng-controller="DialogCtrl" ng-click="showConfirm($event)">
+    Verify Dialog
+  </md-button>
+  <md-button class="md-primary md-raised" ng-click="toggleRight()">
+    Right SideNav
+  </md-button>
+  <md-button ng-controller="NotifyCtrl" class="md-warn md-raised" ng-click="showCustomToast()">
+    TW
+  </md-button>
+
+  <md-divider></md-divider>
+</md-sidenav>
+-->
